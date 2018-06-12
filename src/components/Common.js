@@ -25,11 +25,12 @@ export const Image = styled.img``;
 
 export const ChooseButton = styled.button`
 border: 1px solid #00a9d5;
-color: #00a9d5;
+color: ${({choosen}) => !choosen ? '#00a9d5' : 'white'};
 font-weight: bold;
-background-color: white;
-width: 100px;
-height: 30px;
+font-size: 15px;
+background-color: ${({choosen}) => choosen ? '#00a9d5' : 'white'};
+width: 120px;
+height: 40px;
 margin-top: 10px;
 :hover {
   cursor: pointer;

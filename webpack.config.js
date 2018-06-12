@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
+  devtool: 'source-map',
   entry: [
     'react-hot-loader/patch',
     './src/index.js'
