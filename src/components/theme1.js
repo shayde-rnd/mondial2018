@@ -16,3 +16,5 @@ export const h3 = `
 font-size: 20px;
 font-family: sans-serif;
 `;
+
+export const primaryColor = `#00a9d5`;

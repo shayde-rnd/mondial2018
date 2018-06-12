@@ -13,10 +13,10 @@ class HouseStage extends Component {
   render() {
     return (
     <Flex margin="20px" direction="column" alignItems="center">
-      <Header margin="20px" type="h1">
+      <Header color="black" margin="20px" type="h1">
         First Stage
       </Header>
-      <Line/>
+      <Line color='rgb(151,151,151)'/>
       <Flex flexWarp="wrap" justifyContent="center">
       {
         getHouseStage().houses.map((house) => (<FirstRoundHouse house={house}/>))
