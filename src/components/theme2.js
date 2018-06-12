@@ -18,3 +18,4 @@ font-family: sans-serif;
 `;
 
 export const primaryColor = `pink`;
+export const primaryColorHover = `rgba(255, 192, 203, 0.2)`;

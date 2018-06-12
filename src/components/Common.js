@@ -20,6 +20,9 @@ justify-content: ${({justifyContent}) => justifyContent};
 align-items: ${({alignItems}) => alignItems};
 flex-wrap: ${({flexWarp}) => flexWarp};
 opacity: ${({opacity}) => opacity || 1};
+width: ${({width}) => width};
+height: ${({height}) => height};
+background-color: ${({backgroundColor}) => backgroundColor};
 `;
 
 export const Image = styled.img``;
@@ -30,12 +33,13 @@ color: ${({choosen, theme}) => !choosen ? theme.primaryColor : 'white'};
 font-weight: bold;
 font-size: 15px;
 background-color: ${({choosen, theme}) => choosen ? theme.primaryColor : 'white'};
-width: 120px;
-height: 40px;
+width: ${({width}) => width || '120px' };
+height: ${({height}) => height || '40px' };
 margin-top: 10px;
+margin: ${({margin}) => margin};
 :hover {
   cursor: pointer;
-  background-color: ${({ theme, disabled, choosen }) => !choosen && !disabled && theme.primaryColorHover};
+  background-color: ${({ theme, disabled, choosen, hoveredBG }) => !choosen && !disabled && (hoveredBG || theme.primaryColorHover)};
 }
 :focus {
   outline: 0;

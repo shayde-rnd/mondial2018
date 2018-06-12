@@ -8,6 +8,7 @@ import { Flex, Header, Line } from 'components/Common';
 
 export const HouseContainer = styled(Flex)`
 border: 1px solid lightgray;
+box-shadow: 3px 3px 3px 3px ${({theme}) => theme.primaryColorHover};
 `
 
 class FirstRoundHouse extends Component {

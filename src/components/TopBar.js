@@ -1,19 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ChooseButton } from 'components/Common';
+import { ChooseButton, Flex } from 'components/Common';
 
-const StyledDiv = styled.div`
+const StyledFlex = styled(Flex)`
 background-color: ${({theme}) => theme.primaryColor};
-width: 100%;
-height: 80px;
 `;
 
 const TopBar = ({updateThemeCB}) => (
-  <StyledDiv>
-    <button onClick={updateThemeCB}>
+  <StyledFlex height="140px" alignItems="center">
+    <ChooseButton onClick={updateThemeCB} width="150px" margin="20px" hoveredBG="white">
       Change Theme
-    </button>
-  </StyledDiv>
+    </ChooseButton>
+  </StyledFlex>
 );
 
 export default TopBar;

@@ -20,17 +20,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state={
-      theme: 1
+      themes: [theme1, theme2],
+      selectedTheme: 0
     }
   }
 
   render() {
-    const theme = this.state.theme === 1 ? theme1 : theme2
 
     return (
-      <ThemeProvider theme={ theme }>
+      <ThemeProvider theme={ this.state.themes[this.state.selectedTheme] }>
         <Layout>
-          <TopBar updateThemeCB={() => { this.setState({theme: this.state.theme === 1 ? 2 : 1})}}/>
+          <TopBar updateThemeCB={() => { this.setState({selectedTheme: (this.state.selectedTheme + 1)%this.state.themes.length})}}/>
           <HouseStage/>
         </Layout>
       </ThemeProvider>
