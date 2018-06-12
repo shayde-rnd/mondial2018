@@ -19,7 +19,7 @@ class HouseStage extends Component {
       <Line color='rgb(151,151,151)'/>
       <Flex flexWarp="wrap" justifyContent="center">
       {
-        getHouseStage().houses.map((house) => (<FirstRoundHouse house={house}/>))
+        getHouseStage().houses.map((house) => (<FirstRoundHouse key={house.name} house={house}/>))
       }
       </Flex>
     </Flex>

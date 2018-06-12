@@ -21,7 +21,7 @@ class Team extends Component {
 
   render() {
     return (
-      <Flex direction="column" margin="20px" alignItems="center">
+      <Flex direction="column" margin="20px" alignItems="center" opacity={this.props.disabled && !this.state.choosen ? 0.3 : 1}>
         <Image src={this.props.team.img}/>
         <Header type="h3" margin="20px">
           {this.props.team.name}

@@ -19,6 +19,7 @@ padding: ${({padding}) => padding};
 justify-content: ${({justifyContent}) => justifyContent};
 align-items: ${({alignItems}) => alignItems};
 flex-wrap: ${({flexWarp}) => flexWarp};
+opacity: ${({opacity}) => opacity || 1};
 `;
 
 export const Image = styled.img``;
@@ -34,5 +35,9 @@ height: 40px;
 margin-top: 10px;
 :hover {
   cursor: pointer;
+  background-color: ${({ theme, disabled, choosen }) => !choosen && !disabled && theme.primaryColorHover};
+}
+:focus {
+  outline: 0;
 }
 `

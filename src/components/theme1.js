@@ -18,3 +18,4 @@ font-family: sans-serif;
 `;
 
 export const primaryColor = `#00a9d5`;
+export const primaryColorHover = `rgba(0, 169, 213, 0.2)`;

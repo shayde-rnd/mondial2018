@@ -22,7 +22,7 @@ class FirstRoundHouse extends Component {
   handleChoosenUpdate = (name, isChoosen) => {
     let choosen = null;
     if(!isChoosen){
-      choosen = filter((_name) => _name === name, this.state.choosen)
+      choosen = filter((_name) => _name !== name, this.state.choosen)
     } else {
       choosen = [...this.state.choosen, name];
     }
@@ -40,7 +40,9 @@ class FirstRoundHouse extends Component {
         <ChooseTeam senteces={["Choose first", "Choose second", "choosen"]} sentenceIdx={this.state.choosen.length}/>
         <Flex>
           {
-            this.props.house.teams.map((team) => <Team disabled={this.state.choosen.length >= 2} team={team} handleChoosenUpdate={ this.handleChoosenUpdate }/>)
+            this.props.house.teams.map((team) => <Team disabled={this.state.choosen.length >= 2} 
+                                                       team={team} handleChoosenUpdate={ this.handleChoosenUpdate }
+                                                       key={team.name}/>)
           }
         </Flex>
       </HouseContainer>
@@ -49,8 +51,7 @@ class FirstRoundHouse extends Component {
 }
 
 FirstRoundHouse.propTypes = {
-  house: PropTypes.object.isRequired,
-  selectionCB: PropTypes.func.isRequired
+  house: PropTypes.object.isRequired
 };
 
 export default FirstRoundHouse;
