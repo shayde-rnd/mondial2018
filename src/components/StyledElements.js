@@ -1,6 +1,10 @@
+import React from 'react';
+import classNames from 'classnames';
 import styled, { css } from 'styled-components';
 
-const cssAttributes = css`
+// Layout and non colored/fonted attributes
+
+const cssNonThemedAttributes = css`
 height: ${({ height }) => height};
 min-height: ${({ minHeight }) => minHeight};
 max-height: ${({ maxHeight }) => maxHeight};
@@ -44,24 +48,55 @@ border-bottom-left-radius: ${({ borderBottomLeftRadius }) => borderBottomLeftRad
 border-bottom-right-radius: ${({ borderBottomRightRadius }) => borderBottomRightRadius};
 `;
 
-export const cssDirectThemedAttributes = css`
-background-color: ${({ theme, backgroundColor }) => theme[backgroundColor]};
-color: ${({ theme, color }) => theme[color]};
+// Colors and Fonts attributes logicaly named from theme
+
+export const cssThemedAttributes = css`
+background-color: ${({ theme, backgroundThemedColor }) => theme[backgroundThemedColor]};
+color: ${({ theme, themedColor }) => theme[themedColor]};
+`;
+
+// Basic HTML elemetns allowing set css attributes as properties and includes potential class's
+
+export const Div = styled.div`
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+`;
+
+const Input = styled.input`
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+${({ theme, type }) => theme[type]};
 `;
 
 export const Label = styled.label`
-${cssAttributes}
-${cssDirectThemedAttributes}
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+${({ theme, type }) => theme[type]};
 `;
 
 export const Span = styled.span`
-${cssAttributes}
-${cssDirectThemedAttributes}
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+${({ theme, type }) => theme[type]};
 `;
 
-// export const behaviors = css`
-// ${({ theme, type, selected, selectedType }) => selected ? theme[selectedType || type] : theme[type]};
-// :hover {
-//   ${({ theme, hoverType }) => hoverType ? theme[hoverType] : ''};
-// }
-// `;
+const StyledButton = styled.button`
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+${({ theme, type }) => theme[type]};
+`;
+
+export const Button = (props) => {
+  const { type } = props;
+
+  const className = classNames({
+    primaryButtonHover: type === 'primary',
+    primaryButtonPressed: type === 'primary',
+    primaryButtonFocused: type === 'primary',
+    secondaryButtonHover: type === 'secondary',
+    secondaryButtonPressed: type === 'secondary',
+    secondaryButtonFocused: type === 'secondary',
+  })
+
+  return <StyledButton {...props} type={ type } className={ className }/>
+};

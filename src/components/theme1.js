@@ -1,18 +1,18 @@
-import styled from 'styled-components';
+import { css } from 'styled-components';
 
-export const h1 = `
+export const h1 = css`
 font-size: 40px;
 font-weight: bold;
 font-family: sans-serif;
 `;
 
-export const h2 = `
+export const h2 = css`
 font-size: 30px;
 font-weight: bold;
 font-family: sans-serif;
 `;
 
-export const h3 = `
+export const h3 = css`
 font-size: 20px;
 font-family: sans-serif;
 `;
