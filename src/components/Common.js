@@ -11,20 +11,6 @@ width: 80%;
 border: 1px solid ${({color, theme}) => color || theme.primaryColor};
 `;
 
-export const Flex = styled.div`
-display: flex;
-flex-direction: ${({direction}) => direction};
-margin: ${({margin}) => margin};
-padding: ${({padding}) => padding};
-justify-content: ${({justifyContent}) => justifyContent};
-align-items: ${({alignItems}) => alignItems};
-flex-wrap: ${({flexWarp}) => flexWarp};
-opacity: ${({opacity}) => opacity || 1};
-width: ${({width}) => width};
-height: ${({height}) => height};
-background-color: ${({backgroundColor}) => backgroundColor};
-`;
-
 export const Image = styled.img``;
 
 export const ChooseButton = styled.button`

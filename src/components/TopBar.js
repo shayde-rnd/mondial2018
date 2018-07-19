@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ChooseButton, Flex } from 'components/Common';
+import { ChooseButton } from 'components/Common';
+import { FlexColumns } from 'components/CommonComponents';
 
-const StyledFlex = styled(Flex)`
+const StyledFlex = styled(FlexColumns)`
 background-color: ${({theme}) => theme.primaryColor};
 `;
 

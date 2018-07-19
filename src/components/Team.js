@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import { Flex, Header, Image, ChooseButton } from 'components/Common';
+import { Header, Image, ChooseButton } from 'components/Common';
+import {FlexRows} from 'components/CommonComponents';
 
 class Team extends Component {
 
@@ -21,7 +22,7 @@ class Team extends Component {
 
   render() {
     return (
-      <Flex direction="column" margin="20px" alignItems="center" opacity={this.props.disabled && !this.state.choosen ? 0.3 : 1}>
+      <FlexRows margin="20px" alignItems="center" opacity={this.props.disabled && !this.state.choosen ? 0.3 : 1}>
         <Image src={this.props.team.img}/>
         <Header type="h3" margin="20px">
           {this.props.team.name}
@@ -29,7 +30,7 @@ class Team extends Component {
         <ChooseButton disabled={!this.state.choosen && this.props.disabled} onClick={this.handleChoose} choosen={this.state.choosen}>
           Choose
         </ChooseButton>
-      </Flex>
+      </FlexRows>
   )
   }
 }

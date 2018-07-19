@@ -1,4 +1,5 @@
-import { cssNonThemedAttributes, cssThemedAttributes, Div } from 'StyledElements';
+import styled from 'styled-components';
+import { cssNonThemedAttributes, cssThemedAttributes, Div } from 'components/StyledElements';
 
 export const FlexColumns = styled(Div)`
 ${cssNonThemedAttributes}
