@@ -15,6 +15,7 @@ display: flex;
 flex-direction: column;
 `;
 
+// Impose default values
 export const WSButton = styled(Button)`
 min-width: ${({width}) => width || '120px' };
 min-height: ${({height}) => height || '40px' };

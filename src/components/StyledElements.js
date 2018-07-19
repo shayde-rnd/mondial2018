@@ -53,7 +53,7 @@ background-color: ${({ theme, backgroundThemedColor }) => theme[backgroundThemed
 color: ${({ theme, themedColor }) => theme[themedColor]};
 `;
 
-// Basic HTML elemetns allowing set css attributes as properties and includes potential class's
+// Basic HTML elemetns allowing set css attributes as properties and includes potential theme key
 
 export const Div = styled.div`
 ${cssNonThemedAttributes}
