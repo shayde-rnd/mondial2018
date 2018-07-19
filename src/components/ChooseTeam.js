@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {Label} from 'components/StyledElements';
 
 const ChooseTeam = ({senteces, sentenceIdx = 0}) => (
-  <Label type="h4" margin="10px">
+  <Label type="l4" margin="10px">
     {
       senteces[sentenceIdx]
     }

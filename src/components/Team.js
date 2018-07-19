@@ -24,7 +24,7 @@ class Team extends Component {
     return (
       <FlexRows margin="20px" alignItems="center" opacity={this.props.disabled && !this.state.choosen ? 0.3 : 1}>
         <Image src={this.props.team.img}/>
-        <Label type="h3" margin="20px">
+        <Label type="l3" margin="20px">
           {this.props.team.name}
         </Label>
         <WSButton type={this.state.choosen ? "primaryBtn" : "secondaryBtn"} disabled={!this.state.choosen && this.props.disabled} onClick={this.handleChoose} choosen={this.state.choosen}>

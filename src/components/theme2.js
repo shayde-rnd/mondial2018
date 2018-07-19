@@ -20,24 +20,24 @@ export const secondaryBtnColor = `pink`;
 
 // LABELS
 
-export const h1 = css`
+export const l1 = css`
 font-size: 40px;
 font-weight: bold;
 font-family: sans-serif;
 `;
 
-export const h2 = css`
+export const l2 = css`
 font-size: 30px;
 font-weight: bold;
 font-family: sans-serif;
 `;
 
-export const h3 = css`
+export const l3 = css`
 font-size: 20px;
 font-family: sans-serif;
 `;
 
-export const h4 = css`
+export const l4 = css`
 color: ${primaryColor};
 font-size: 30px;
 font-weight: bold;

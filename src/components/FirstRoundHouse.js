@@ -37,7 +37,7 @@ class FirstRoundHouse extends Component {
   render() {
     return (
       <HouseContainer alignItems="center" margin="20px" padding="20px">
-        <Label type="h2" margin="10px">{this.props.house.name}</Label>
+        <Label type="l2" margin="10px">{this.props.house.name}</Label>
         <Line type="primaryLine" width="80%"/>
         <ChooseTeam senteces={["Choose first", "Choose second", "choosen"]} sentenceIdx={this.state.choosen.length}/>
         <FlexColumns>

@@ -13,7 +13,7 @@ class HouseStage extends Component {
   render() {
     return (
     <FlexRows margin="20px" alignItems="center">
-      <Label margin="20px" type="h1">
+      <Label margin="20px" type="l1">
         First Stage
       </Label>
       <Line type="secondaryLine" width="80%"/>
