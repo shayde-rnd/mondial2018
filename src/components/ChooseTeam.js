@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Header } from 'components/Common'
+import {Label} from 'components/StyledElements';
 
 const ChooseTeam = ({senteces, sentenceIdx = 0}) => (
-  <Header type="h2" margin="10px">
+  <Label type="h4" margin="10px">
     {
       senteces[sentenceIdx]
     }
-  </Header>
+  </Label>
 );
 
 ChooseTeam.propTypes = {

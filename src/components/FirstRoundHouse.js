@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { filter } from 'lodash/fp';
 import Team from 'components/Team';
 import ChooseTeam from 'components/ChooseTeam';
-import { Header, Line } from 'components/Common';
-import {FlexRows, FlexColumns} from 'components/CommonComponents';
+import {FlexRows, FlexColumns, Line} from 'components/CommonComponents';
+import {Label} from 'components/StyledElements';
 
 export const HouseContainer = styled(FlexRows)`
 border: 1px solid lightgray;
@@ -37,8 +37,8 @@ class FirstRoundHouse extends Component {
   render() {
     return (
       <HouseContainer alignItems="center" margin="20px" padding="20px">
-        <Header type="h2" margin="10px" color="black">{this.props.house.name}</Header>
-        <Line/>
+        <Label type="h2" margin="10px">{this.props.house.name}</Label>
+        <Line type="primaryLine" width="80%"/>
         <ChooseTeam senteces={["Choose first", "Choose second", "choosen"]} sentenceIdx={this.state.choosen.length}/>
         <FlexColumns>
           {

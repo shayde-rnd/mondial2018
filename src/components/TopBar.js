@@ -1,18 +1,19 @@
 import React from 'react';
+import { FlexColumns, WSButton } from 'components/CommonComponents';
 import styled from 'styled-components';
-import { ChooseButton } from 'components/Common';
-import { FlexColumns } from 'components/CommonComponents';
 
-const StyledFlex = styled(FlexColumns)`
-background-color: ${({theme}) => theme.primaryColor};
-`;
+const CustomWSButton = styled(WSButton)`
+:hover {
+background-color: ${({theme}) => theme.normalColor};
+}
+`
 
 const TopBar = ({updateThemeCB}) => (
-  <StyledFlex height="140px" alignItems="center">
-    <ChooseButton onClick={updateThemeCB} width="150px" margin="20px" hoveredBG="white">
+  <FlexColumns height="140px" alignItems="center" backgroundThemedColor="primaryColor">
+    <CustomWSButton type="secondaryBtn" onClick={updateThemeCB} width="150px"  margin="20px">
       Change Theme
-    </ChooseButton>
-  </StyledFlex>
+    </CustomWSButton>
+  </FlexColumns>
 );
 
 export default TopBar;

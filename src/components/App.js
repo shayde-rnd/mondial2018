@@ -13,16 +13,18 @@ class App extends Component {
     super(props);
     this.state={
       themes: [theme1, theme2],
-      selectedTheme: 0
+      selectedThemeIdx: 0
     }
   }
 
   render() {
 
+    const themeCnt = this.state.themes.length;
+
     return (
-      <ThemeProvider theme={ this.state.themes[this.state.selectedTheme] }>
+      <ThemeProvider theme={ this.state.themes[this.state.selectedThemeIdx] }>
         <FlexRows>
-          <TopBar updateThemeCB={() => { this.setState({selectedTheme: (this.state.selectedTheme + 1)%this.state.themes.length})}}/>
+          <TopBar updateThemeCB={() => { this.setState({selectedThemeIdx: (this.state.selectedThemeIdx + 1)%themeCnt})}}/>
           <HouseStage/>
         </FlexRows>
       </ThemeProvider>

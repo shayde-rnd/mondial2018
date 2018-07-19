@@ -1,5 +1,3 @@
-import React from 'react';
-import classNames from 'classnames';
 import styled, { css } from 'styled-components';
 
 // Layout and non colored/fonted attributes
@@ -60,6 +58,7 @@ color: ${({ theme, themedColor }) => theme[themedColor]};
 export const Div = styled.div`
 ${cssNonThemedAttributes}
 ${cssThemedAttributes}
+${({ theme, type }) => theme[type]};
 `;
 
 const Input = styled.input`
@@ -80,23 +79,13 @@ ${cssThemedAttributes}
 ${({ theme, type }) => theme[type]};
 `;
 
-const StyledButton = styled.button`
+export const Button = styled.button`
 ${cssNonThemedAttributes}
 ${cssThemedAttributes}
 ${({ theme, type }) => theme[type]};
 `;
 
-export const Button = (props) => {
-  const { type } = props;
-
-  const className = classNames({
-    primaryButtonHover: type === 'primary',
-    primaryButtonPressed: type === 'primary',
-    primaryButtonFocused: type === 'primary',
-    secondaryButtonHover: type === 'secondary',
-    secondaryButtonPressed: type === 'secondary',
-    secondaryButtonFocused: type === 'secondary',
-  })
-
-  return <StyledButton {...props} type={ type } className={ className }/>
-};
+export const Image = styled.img`
+${cssNonThemedAttributes}
+${cssThemedAttributes}
+${({ theme, type }) => theme[type]};`;
