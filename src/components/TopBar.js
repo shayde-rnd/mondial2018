@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const CustomWSButton = styled(WSButton)`
 :hover {
-background-color: ${({theme}) => theme.normalColor};
+background-color: ${({theme}) => theme.baseColor};
 }
 `
 

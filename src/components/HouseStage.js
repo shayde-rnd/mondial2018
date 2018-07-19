@@ -16,7 +16,7 @@ class HouseStage extends Component {
       <Label margin="20px" type="h1">
         First Stage
       </Label>
-      <Line type="secondaryLine"/>
+      <Line type="secondaryLine" width="80%"/>
       <FlexColumns flexWrap="wrap" justifyContent="center">
       {
         getHouseStage().houses.map((house) => (<FirstRoundHouse key={house.name} house={house}/>))

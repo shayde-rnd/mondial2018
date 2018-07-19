@@ -17,7 +17,7 @@ flex-direction: column;
 
 export const WSButton = styled(Button)`
 min-width: ${({width}) => width || '120px' };
-height: ${({height}) => height || '40px' };
+min-height: ${({height}) => height || '40px' };
 `;
 
 export const Line = styled(Div)`

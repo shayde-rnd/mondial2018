@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
 
 export const primaryColor = `#00a9d5`;
-export const primaryColorHover = `rgba(0, 169, 213, 0.2)`;
+export const primaryColorHover = `rgba(0, 169, 213, 0.1)`;
 export const secondaryColor = 'white';
 export const secondaryColorHover = `rgba(0, 169, 213, 0.2)`;
-export const normalColor = 'white';
+export const baseColor = 'white';
 
 // Line seperator
 export const secondaryLineColor = 'black';
@@ -46,7 +46,6 @@ font-weight: bold;
 font-size: 15px;
 :hover {
   cursor: pointer;
-  background-color: white;
 }
 :focus {
   outline: 0;
